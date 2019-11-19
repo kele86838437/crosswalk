@@ -54,7 +54,7 @@ class DepsFetcher(object):
     # src/xwalk/buildtools does not pass gclient's syntax validation.
     gclient_cmd.append('--disable-syntax-validation')
     gclient_utils.CheckCallAndFilter(gclient_cmd,
-        always=self._options.verbose, cwd=self._root_dir)
+        always_show_header=True, cwd=self._root_dir)
 
 
 def main():
